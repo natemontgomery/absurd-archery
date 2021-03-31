@@ -1,7 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.middleware.use RackPassword::Block, auth_codes: ENV["RACK_PASSWORD"]
+  config.middleware.use RackPassword::Block, auth_codes: [ENV["RACK_PASSWORD"]]
 
   config.cache_classes = true
 
