@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 5
+  pool: 10
 
 development:
   <<: *default
@@ -17,3 +17,5 @@ test:
 production:
   <<: *default
   database: absurd_archery
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

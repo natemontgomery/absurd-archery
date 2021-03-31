@@ -7,6 +7,10 @@ gem 'spree_gateway', '~> 3.9'
 gem 'spree_i18n', '~> 5.0'
 
 gem 'pg'
+gem 'redis'
+gem 'hiredis'
+
+gem 'webpacker'
 
 gem 'bootsnap'
 gem 'listen'
