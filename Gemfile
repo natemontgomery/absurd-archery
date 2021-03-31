@@ -8,6 +8,7 @@ gem 'spree_i18n', '~> 5.0'
 
 gem 'hiredis'
 gem 'pg'
+gem 'puma'
 gem 'redis'
 gem 'sidekiq'
 

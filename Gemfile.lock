@@ -203,6 +203,8 @@ GEM
       actionmailer (>= 3)
       premailer (~> 1.7, >= 1.7.9)
     public_suffix (4.0.6)
+    puma (5.2.2)
+      nio4r (~> 2.0)
     rabl (0.14.3)
       activesupport (>= 2.3.14)
     racc (1.5.2)
@@ -439,6 +441,7 @@ DEPENDENCIES
   hiredis
   listen
   pg
+  puma
   rack_password
   rails (~> 6.1)
   redis
