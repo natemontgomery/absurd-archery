@@ -1,10 +1,15 @@
 <% @body_id = 'home' %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-3"></div>
+  <div class="row mt-5">
+    <div class="col-1"></div>
     <div class="col-2">
-      <%= link_to spree.nested_taxons_path('home'), class: "homepage-taxon-box mb-3" do %>
+      <%= link_to root_path do %>
+        <img class="w-100 lazyload"
+          data-src="<%= asset_path('homepage/category_banner_upper.jpg') %>"
+          data-srcset="<%= image_source_set('homepage/category_banner_upper') %>"
+          alt="Home">
+
         <div class="homepage-taxon-box-text">
           <h3>Home</h3>
         </div>
@@ -12,74 +17,83 @@
     </div>
 
     <div class="col-2">
-      <%= link_to spree.nested_taxons_path('sportswear'), class: "homepage-taxon-box" do %>
+      <%= link_to spree.nested_taxons_path('syllabus') do %>
         <img class="w-100 lazyload"
-          data-src="<%= asset_path('homepage/category_banner_lower.jpg') %>"
-          data-srcset="<%= image_source_set('homepage/category_banner_lower') %>"
-          alt="Sportswear">
+          data-src="<%= asset_path('homepage/category_banner_upper.jpg') %>"
+          data-srcset="<%= image_source_set('homepage/category_banner_upper') %>"
+          alt="Syllabus">
 
-        <div class="homepage-taxon-box-text" role="img" aria-label="Sportswear">
-          <h3>Sportswear</h3>
+        <div class="homepage-taxon-box-text">
+          <h3>Syllabus</h3>
         </div>
       <% end %>
     </div>
 
     <div class="col-2">
-      <%= link_to spree.nested_taxons_path('women'), class: "homepage-taxon-box flex-grow-1" do %>
+      <%= link_to spree.nested_taxons_path('schedule') do %>
         <img class="w-100 lazyload"
-          data-src="<%= asset_path('homepage/big_category_banner.jpg') %>"
-          data-srcset="<%= image_source_set('homepage/big_category_banner') %>"
-          alt="Women">
+          data-src="<%= asset_path('homepage/category_banner_upper.jpg') %>"
+          data-srcset="<%= image_source_set('homepage/category_banner_upper') %>"
+          alt="Schedule">
 
         <div class="homepage-taxon-box-text">
-          <h3>Women</h3>
+          <h3>Schedule</h3>
         </div>
       <% end %>
     </div>
-    <div class="col-3"></div>
+
+    <div class="col-2">
+      <%= link_to spree.nested_taxons_path('about') do %>
+        <img class="w-100 lazyload"
+          data-src="<%= asset_path('homepage/category_banner_upper.jpg') %>"
+          data-srcset="<%= image_source_set('homepage/category_banner_upper') %>"
+          alt="About">
+
+        <div class="homepage-taxon-box-text">
+          <h3>About</h3>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-2">
+      <%= link_to spree.nested_taxons_path('contact') do %>
+        <img class="w-100 lazyload"
+          data-src="<%= asset_path('homepage/category_banner_upper.jpg') %>"
+          data-srcset="<%= image_source_set('homepage/category_banner_upper') %>"
+          alt="Contact">
+
+        <div class="homepage-taxon-box-text">
+          <h3>Contact</h3>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-1"></div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-6">
-      <%= link_to spree.nested_taxons_path('streetstyle') do %>
-        <div class="homepage-bottom-box text-center mb-3">
-          <img class="w-100 lazyload"
-            data-src="<%= asset_path('homepage/promo_banner_left.jpg') %>"
-            data-srcset="<%= image_source_set('homepage/promo_banner_left') %>"
-            alt="NEW COLLECTION">
-
-          <div class="homepage-bottom-box-inner" role="img" aria-label="New Collection">
-            <div class="homepage-bottom-box-inner-small-text">
-              New Collection
-            </div>
-            <div class="homepage-bottom-box-inner-big-text">
-              Streetstyle
-            </div>
-          </div>
+    <div class="col-12">
+      <div class="homepage-bottom-box text-center px-5 pt-5 pb-4">
+        <div class="row mb-3">
+          I am an archery instructor certified under the National Training Standard with team USA.
+          Following five years of dedication to the sport I was compelled to become an instructor by peers and senior mentors.
         </div>
-      <% end %>
-    </div>
-
-    <div class="col-12 col-lg-6">
-      <%= link_to spree.nested_taxons_path('summer-sale') do %>
-        <div class="homepage-bottom-box text-center mb-3">
-          <img class="w-100 lazyload"
-            data-src="<%= asset_path('homepage/promo_banner_right.jpg') %>"
-            data-srcset="<%= image_source_set('homepage/promo_banner_right') %>"
-            alt="Summer Sale">
-
-          <div class="homepage-bottom-box-inner">
-            <div class="homepage-bottom-box-inner-small-text">
-              Summer Sale
-            </div>
-            <div class="homepage-bottom-box-inner-big-text">
-              Up To 60%
-            </div>
-          </div>
+        <div class="row mb-3">
+          Though the world may be wracked by a feeling of internet based boredom at the moment we can still lean on classic skill building and character enhancing activities to keep our minds sharp and our focus attuned.
         </div>
-      <% end %>
+        <div class="row mb-3">
+          With the noble, refined pastime of archery we learn to train our bodies and minds to work in unison.
+          Slowly gaining a better awareness not just of ourselves but also the world around us.
+          It is my aim to provide this skill ot the community at a highly discounted rate in order to propagate the serenity and direction a fine archery program can establish.
+        </div>
+        <div class="row mb-3">
+          The contents of the Syllabus tab will walk you through the course and availability options.
+          Please note that all course safety protocols and guidelines have been approved as proper teaching method under the American National Training Standard.
+          All instruments will naturally be wiped with sanitizing solution before and after classes.
+          The option for "no tip" (corked points) play will be enlisted until students show an understanding and appreciation for lane safety rules.
+        </div>
+      </div>
     </div>
   </div>
 </div>
