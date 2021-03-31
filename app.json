@@ -1,0 +1,33 @@
+{
+  "name": "absurd-archery",
+  "stack": "heroku-20",
+  "env": {
+    "RACK_PASSWORD": { "required": false }
+  },
+  "addons": [
+    "mailtrap",
+    {
+      "plan": "heroku-redis:hobby-dev"
+    },
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "options": {
+        "version": "10"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

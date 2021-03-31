@@ -31,3 +31,7 @@ group :test do
   gem 'webdrivers'
   gem 'webmock'
 end
+
+group :production do
+  gem 'rails_12factor' # Full heroku features
+end
