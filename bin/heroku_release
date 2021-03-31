@@ -21,7 +21,7 @@ if [ "$schema_version" -eq "0" ]; then
   bin/rails db:structure:load
 else
   printf "\n⏳${YELLOW}   [Release Phase]: Running database migrations.${NO_COLOR}\n"
-  bin/rails db:migrate cache:clear
+  bin/rails db:migrate
 fi
 
 printf "\n🎉${GREEN}   [Release Phase]: Database is up to date.${NO_COLOR}\n"
