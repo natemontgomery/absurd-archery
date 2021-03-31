@@ -12,12 +12,12 @@ gem 'puma'
 gem 'redis'
 gem 'sidekiq'
 
-gem 'dotenv-rails'
+gem 'bootsnap'
 gem 'rack_password'
 gem 'webpacker'
 
 group :development, :test do
-  gem 'bootsnap'
+  gem 'dotenv-rails'
   gem 'listen'
 end
 
