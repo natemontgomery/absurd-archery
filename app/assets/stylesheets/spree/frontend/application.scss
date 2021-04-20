@@ -55,3 +55,13 @@
 @import "spree/frontend/views/spree/shared/color_select";
 @import "spree/frontend/views/spree/shared/dropdown";
 @import "spree/frontend/views/spree/shared/delete_address_popup";
+
+.center-box {
+  height: auto;
+  background: $secondary-background;
+  color: $font-color;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}

@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module AbsurdArchery
   class Application < Rails::Application
-
+    ### Spree configuration
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -20,6 +20,7 @@ module AbsurdArchery
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
     end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.time_zone = "Pacific Time (US & Canada)"
