@@ -7,4 +7,6 @@ Spree::Core::Engine.routes.draw do
   get '/schedule' => 'home#schedule'
   get '/about' => 'home#about'
   get '/contact' => 'home#contact'
+
+  resources :archery_lesson_appointments
 end

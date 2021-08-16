@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.2'
+ruby '2.7.3'
 
 gem 'rails', '~> 6.1'
 gem 'spree', '~> 4.2'
@@ -17,9 +17,14 @@ gem 'bootsnap'
 gem 'rack_password'
 gem 'webpacker'
 
+gem 'simple_calendar'
+gem 'trix'
+gem 'stripe'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'listen'
+  gem 'pry-byebug'
 end
 
 group :test do

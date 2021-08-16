@@ -1,0 +1,29 @@
+<% @body_id = 'schedule' %>
+
+<div class="container center-box px-5 pt-3">
+  <% if flash[:notice] %>
+    <div class="row my-3 px-3 py-2 bg-primary text-white">
+      <div class="col-12">
+        <div class="notice"><%= flash[:notice] %></div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-12">
+      <%= week_calendar(events: @lesson_appointments) do |date, lessons| %>
+        <% (8..18).each do |hour| %>
+          <div>
+            <% start_time = Time.zone.parse("#{hour}:00") %>
+
+            <%= link_to start_time.strftime("%l %P"),
+                        "#{archery_lesson_appointments_path}?#{{
+                          start_time: start_time.iso8601, end_time: 1.hour.after(start_time).iso8601
+                        }.to_param}",
+                        method: 'post' %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
