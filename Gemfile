@@ -17,9 +17,10 @@ gem 'bootsnap'
 gem 'rack_password'
 gem 'webpacker'
 
+gem 'business_time'
 gem 'simple_calendar'
-gem 'trix'
 gem 'stripe'
+gem 'trix'
 
 group :development, :test do
   gem 'dotenv-rails'

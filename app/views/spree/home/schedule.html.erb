@@ -12,13 +12,34 @@
   <div class="row">
     <div class="col-12">
       <%= week_calendar(events: @lesson_appointments) do |date, lessons| %>
-        <% (8..18).each do |hour| %>
-          <div>
-            <% start_time = Time.zone.parse("#{hour}:00") %>
+        <% if [3,4,5].include?(date.wday) %>
+          <div class="my-2 pl-3">
+            <% start_time = Time.zone.parse("8:00") %>
+            <% end_time = Time.zone.parse("10:00") %>
 
-            <%= link_to start_time.strftime("%l %P"),
+            <%= link_to "#{start_time.strftime("%l %P")} to #{end_time.strftime("%l %P")}",
                         "#{archery_lesson_appointments_path}?#{{
-                          start_time: start_time.iso8601, end_time: 1.hour.after(start_time).iso8601
+                          start_time: start_time.iso8601, end_time: end_time.iso8601
+                        }.to_param}",
+                        method: 'post' %>
+          </div>
+          <div class="my-2 pl-3">
+            <% start_time = Time.zone.parse("12:00") %>
+            <% end_time = Time.zone.parse("14:00") %>
+
+            <%= link_to "#{start_time.strftime("%l %P")} to #{end_time.strftime("%l %P")}",
+                        "#{archery_lesson_appointments_path}?#{{
+                          start_time: start_time.iso8601, end_time: end_time.iso8601
+                        }.to_param}",
+                        method: 'post' %>
+          </div>
+          <div class="my-2 pl-3">
+            <% start_time = Time.zone.parse("16:00") %>
+            <% end_time = Time.zone.parse("18:00") %>
+
+            <%= link_to "#{start_time.strftime("%l %P")} to #{end_time.strftime("%l %P")}",
+                        "#{archery_lesson_appointments_path}?#{{
+                          start_time: start_time.iso8601, end_time: end_time.iso8601
                         }.to_param}",
                         method: 'post' %>
           </div>
