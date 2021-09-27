@@ -3,6 +3,8 @@ ruby '2.7.3'
 
 gem 'rails', '~> 6.1'
 gem 'spree', '~> 4.2'
+gem 'spree_frontend'
+gem 'spree_backend'
 gem 'spree_auth_devise', '~> 4.3'
 gem 'spree_gateway', '~> 3.9'
 gem 'spree_i18n', '~> 5.0'

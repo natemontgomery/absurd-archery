@@ -34,4 +34,4 @@ module AbsurdArchery
   end
 end
 
-Spree::HomeController.prepend AbsurdArchery::Spree::HomeControllerDecorator
+# Spree::HomeController.prepend AbsurdArchery::Spree::HomeControllerDecorator
