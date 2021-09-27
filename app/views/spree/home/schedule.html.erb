@@ -17,10 +17,9 @@
           <% end_time = Time.zone.parse("10:00") %>
 
           <%= link_to "#{start_time.strftime("%l %P")} to #{end_time.strftime("%l %P")}",
-                      "#{archery_lesson_appointments_path}?#{{
+                      "#{new_archery_lesson_appointment_path}?#{{
                         start_time: start_time.iso8601, end_time: end_time.iso8601
                       }.to_param}",
-                      method: 'post',
                       class: 'text-lg-left' %>
         </div>
         <div class="my-2 pl-3">
@@ -28,10 +27,9 @@
           <% end_time = Time.zone.parse("14:00") %>
 
           <%= link_to "#{start_time.strftime("%l %P")} to #{end_time.strftime("%l %P")}",
-                      "#{archery_lesson_appointments_path}?#{{
+                      "#{new_archery_lesson_appointment_path}?#{{
                         start_time: start_time.iso8601, end_time: end_time.iso8601
                       }.to_param}",
-                      method: 'post',
                       class: 'text-lg-left' %>
         </div>
         <div class="my-2 pl-3">
@@ -39,10 +37,9 @@
           <% end_time = Time.zone.parse("18:00") %>
 
           <%= link_to "#{start_time.strftime("%l %P")} to #{end_time.strftime("%l %P")}",
-                      "#{archery_lesson_appointments_path}?#{{
+                      "#{new_archery_lesson_appointment_path}?#{{
                         start_time: start_time.iso8601, end_time: end_time.iso8601
                       }.to_param}",
-                      method: 'post',
                       class: 'text-lg-left' %>
         </div>
       <% end %>
