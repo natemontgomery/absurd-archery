@@ -8,5 +8,5 @@ Spree::Core::Engine.routes.draw do
   get '/about' => 'home#about'
   get '/contact' => 'home#contact'
 
-  resources :archery_lesson_appointments
+  post 'products/:id', to: 'store#ensure_cart'
 end
