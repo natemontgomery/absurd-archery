@@ -7,6 +7,7 @@ Spree::Core::Engine.routes.draw do
   get '/schedule' => 'home#schedule'
   get '/about' => 'home#about'
   get '/contact' => 'home#contact'
+  get '/terms' => 'home#terms'
 
   post 'products/:id', to: 'store#ensure_cart'
 end

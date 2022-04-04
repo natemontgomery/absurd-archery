@@ -9,58 +9,48 @@
     <title>Absurd Archery</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <%= render partial: 'spree/shared/head' %>
-    <%= render 'spree/shared/paths' %>
+    <%= render partial: "spree/shared/head" %>
+    <%= render "spree/shared/paths" %>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_pack_tag "application" %>
   </head>
 
-  <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+  <body class="<%= body_class %>" id="<%= @body_id || "default" %>" data-hook="body">
     <div class="container">
       <div id="overlay" class="overlay hide-on-esc"></div>
 
       <div class="row">
-        <div class="col-sm mb-2">
+        <div class="col-sm mb-2 nav-link">
           <%= link_to root_path do %>
-            <div class="homepage-taxon-box-text">
-              <h3>Home</h3>
-            </div>
+            <h3>Home</h3>
           <% end %>
         </div>
 
-        <div class="col-sm mb-2">
+        <div class="col-sm mb-2 nav-link">
           <%= link_to :syllabus do %>
-            <div class="homepage-taxon-box-text">
-              <h3>Syllabus</h3>
-            </div>
+            <h3>Syllabus</h3>
           <% end %>
         </div>
 
-        <div class="col-sm mb-2">
+        <div class="col-sm mb-2 nav-link">
           <%= link_to :schedule do %>
-            <div class="homepage-taxon-box-text">
-              <h3>Schedule</h3>
-            </div>
+            <h3>Schedule</h3>
           <% end %>
         </div>
 
-        <div class="col-sm mb-2">
+        <div class="col-sm mb-2 nav-link">
           <%= link_to :about do %>
-            <div class="homepage-taxon-box-text">
-              <h3>About</h3>
-            </div>
+            <h3>About</h3>
           <% end %>
         </div>
 
-        <div class="col-sm mb-2">
+        <div class="col-sm mb-2 nav-link">
           <%= link_to :contact do %>
-            <div class="homepage-taxon-box-text">
-              <h3>Contact</h3>
-            </div>
+            <h3>Contact</h3>
           <% end %>
         </div>
       </div>
@@ -68,6 +58,11 @@
 
     <div class="container center-box px-5 pt-3">
       <%= yield %>
+    </div>
+
+    <div class="container footer text-center mb-3 mt-2">
+      <%= link_to "Terms of Service", "/terms" %>
+      <span> | © 2022 Derrick Francis</span>
     </div>
   </body>
 </html>

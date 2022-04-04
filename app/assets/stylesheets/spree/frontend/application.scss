@@ -58,6 +58,10 @@
 
 @import "simple_calendar";
 
+body {
+  padding-top: 10px !important;
+}
+
 .center-box {
   height: auto;
   background: $secondary-background;
@@ -66,4 +70,20 @@
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+  border: none;
+  border-radius: 40px;
+}
+
+.nav-link {
+  width: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $font-color;
+  justify-content: center;
+  display: flex;
+
+  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
 }
