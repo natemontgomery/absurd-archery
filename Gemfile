@@ -20,6 +20,7 @@ gem 'bootsnap'
 gem 'webpacker'
 
 gem 'business_time'
+gem 'deface'
 gem 'simple_calendar'
 gem 'stripe'
 gem 'trix'

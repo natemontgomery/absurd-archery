@@ -485,6 +485,7 @@ DEPENDENCIES
   bootsnap
   business_time
   capybara
+  deface
   dotenv-rails
   hiredis
   listen
