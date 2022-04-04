@@ -17,7 +17,6 @@ gem 'redis'
 gem 'sidekiq'
 
 gem 'bootsnap'
-gem 'rack_password'
 gem 'webpacker'
 
 gem 'business_time'
